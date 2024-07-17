@@ -87,17 +87,17 @@ span {
 }
 
 .left-container {
-    padding: 1vw;
+    padding: 30px; /* Set padding once for consistency */
     width: 30vw;
     height: 70vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 30px;
     border-radius: 8px;
-    box-shadow: 0 1px 8px 0 #fff;
+    box-shadow: 0 1px 8px 0 rgba(255, 255, 255, 1); /* Use rgba for better control */
 }
+
 
 .left-container h3 {
     font-size: 3vw;
@@ -133,7 +133,7 @@ button {
     background-color: #1a2947;
     color: white;
     border-radius: 10px;
-    border: 1px solid #1a2947
+    border: 1px solid #fff
 }
 
 button:hover {
@@ -304,12 +304,15 @@ a {
     }
 
     .view-btnplans {
-        padding: 1.5vw;
+        width: 100%;
+        padding: 2vw;
+        margin-bottom: 1vh;
         font-size: 3vw;
     }
 
     .create-btnaccount {
-        padding: 1.5vw;
+        width: 100%;
+        padding: 2vw;
         font-size: 3vw;
     }
 
@@ -319,7 +322,7 @@ a {
     }
 
     .plan {
-        font-size: 4vw;
+        font-size: 5vw;
         font-weight: 300;
     }
 
