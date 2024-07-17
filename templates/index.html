@@ -8,66 +8,54 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
     <title>URL Shortener</title>
 </head>
-
 <body>
-    <div class="header-container">
-        <nav>
-            <img src="{{ url_for('static', filename='imgs/logo.svg') }}" alt="TinyURL Logo" class="logo">
-            <div class="nav-links">
-                <ul class="nav-bar">
-                    <li><a class="nav-items" href="#myurls">My URLs</a></li>
-                    <li><a class="nav-items" href="#plans">Plans</a></li>
-                    <li><a class="nav-items" href="#blog">Blog</a></li>
-                    <li><a class="nav-items" href="#features">Features</a></li>
-                    <li><a class="nav-items" href="#signup">Sign Up</a></li>
-                    <li><a class="nav-items" href="#signin">Sign In</a></li>
-                </ul>
+    <div class="main">
+        <nav class="nav-bar">
+            <h2 class="logo">MinyURL</h2>
+            <div class="nav-part2">
+                <h4><a class="nav-items" href="#myurls">MyURLs</a></h4>
+                <h4><a class="nav-items" href="#plans">Plans</a></h4>
+                <h4><a class="nav-items" href="#blog">Blog</a></h4>
+                <h4><a class="nav-items" href="#features">Features</a></h4>
+                <h4><a class="nav-items" href="#signup">SignUp</a></h4>
+                <h4><a class="nav-items" href="#signin">SignIn</a></h4>
+                <i class="ri-menu-3-line"></i>
             </div>
         </nav>
-    </div>
-
-    <div class="main">
-        <div class="left-container">
-            <h2>Free URL Shortener</h2>
-            <form id="shorten-form">
-                <input type="text" id="url" name="url" placeholder="Enter URL">
-                <button type="submit">Shorten URL</button>
-                <input type="text" id="result" class="result textbox" readonly>
-                <button type="button" onclick="copyText()">Copy</button>
-            </form>
-        </div>
-
-        <div class="right-container">
-            <h3>The Original<br>URL</h3>
-            <p>Create shorter URLs with TinyURL.</p>
-            <p>Want more out of your link shortener? Track link analytics, use branded domains for fully custom
-                links, and manage your links with our paid Plans.</p>
-            <div class="button-container">
-                <button class="right-button view-plans">View Plans</button>
-                <button class="right-button create-account">Create Free Account</button>
+        <h1><span>MinyURL</span> Shortnere is Free.</h1>
+        <div class="content">
+            <div class="left-container">
+                <h3>Free URL Shortener</h3>
+                <form id="shorten-form">
+                    <input type="text" id="url" name="url" placeholder="Enter URL">
+                    <button type="submit">Shorten URL</button>
+                    <input type="text" id="result" class="result textbox" readonly>
+                    <button type="button" onclick="copyText()">Copy</button>
+                </form>
             </div>
-            <h4>TinyURL plans include:</h4>
-            <ul class="plans">
-                <li class="plan">Detailed Link Analytics</li>
-                <li class="plan">Bulk Short URLs</li>
-                <li class="plan">Fully Branded</li>
-                <li class="plan">Link Management Features</li>
-            </ul>
+
+            <div class="right-container">
+                <h3>The Original<br>URL</h3>
+                <p>Create shorter URLs with MinyURL.</p>
+                <p>Want more out of your link shortener? Track link analytics, use branded domains for fully custom
+                    links, and manage your links with our paid Plans.</p>
+                <div class="button-container">
+                    <button class="right-button view-btnplans">View Plans</button>
+                    <button class="right-button create-btnaccount">Create Free Account</button>
+                </div>
+                <h4>TinyURL plans include:</h4>
+                <h5 class="plan">Detailed Link Analytics</h5>
+                <h5 class="plan">Bulk Short URLs</h5>
+                <h5 class="plan">Fully Branded</h5>
+                <h5 class="plan">Link Management Features</h5>
+            </div>
         </div>
-    </div>
-
-    <div class="gap">
-
-    </div>
-
-    <footer>
-        <div class="footer-container">
-            <p class="footer-items">&#169; TinyURL LLC. <a href="#">Terms</a> | <a href="#">Privacy Policy</a> | <a
+        <div class="gap"></div>
+        <div class="footer">
+            <p class="footer-items">&#169; MinyURL LLC. <a href="#">Terms</a> | <a href="#">Privacy Policy</a> | <a
                     href="#">Accessibility</a></p>
         </div>
-    </footer>
-
+    </div>
     <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
 </body>
-
 </html>

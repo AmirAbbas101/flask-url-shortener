@@ -1,4 +1,6 @@
 /* Reset and basic styles */
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -6,88 +8,111 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: "Josefin Sans", sans-serif;
     height: 100vh;
-    background-image: url(/static/imgs/backgound.jpg);
-    /* Adjusted background image path */
+    color: #fff;
+    background-image: url(/static/imgs/background.jpg);
     background-size: cover;
     background-position: center;
-}
 
-.header-container {
-    height: 10vh;
-}
-
-nav {
-    width: 100%;
-    display: flex;
-    position: fixed;
-    justify-content: space-between;
-    background-image: url(/static/imgs/backgound.jpg);
-    background-size: cover;
 }
 
 .nav-bar {
+    height: 50px;
+    width: 100%;
+    background-color: #1a2947;
+    position: fixed;
     display: flex;
-    justify-content: flex-end;
-    /* Corrected justify-content value */
-    gap: 4px;
-    padding-right: 40px;
-    /* Added unit (px) to gap value */
+    align-items: center;
+    justify-content: space-between;
+    padding: 1vh 3vw;
 }
 
-.nav-links {
-    margin: 10px;
-    width: 40%;
-    background-color: #087da8;
-    padding: 10px;
-    border-radius: 10px;
-    /* Added padding for better spacing */
-    list-style-type: none;
-    /* Removed default list-style */
+.nav-part2 {
+    display: flex;
+    gap: 2vw;
+    align-items: center;
 }
 
-.nav-links li {
-    display: inline;
-    /* Changed to inline display for list items */
+.nav-bar h2 {
+    color: #fff;
+    font-size: 3vw;
+    font-weight: 700;
 }
 
-.nav-links a {
+.nav-items {
+    color: #fff;
+    font-size: 1.5vw;
+    font-weight: 600;
     text-decoration: none;
-    color: #ffffff;
-    padding: 5px 10px;
-    /* Added padding for better clickable area */
 }
 
-.main {
+.nav-bar i {
+    display: none;
+    color: #fff;
+    font-size: 5vw;
+    font-weight: 600;
+}
+
+.nav-bar h2:hover,
+.nav-items:hover,
+.nav-bar i:hover {
+    color: #1d5ef5;
+    cursor: pointer;
+}
+
+/* main heading */
+
+h1 {
+    font-size: 4vw;
+    font-weight: 600;
+    padding-left: 3vw;
+    padding-top: 11vh;
+}
+
+span {
+    color: #1d5ef5;
+    /* text-shadow: 0 4px 8px 0 black; */
+}
+
+/* content section */
+
+.content {
+    width: 100%;
+    height: calc(100% - 100px);
     display: flex;
-    padding: 20px;
-    margin: 60px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8vh 3vw;
 }
-
-
-/* form section */
 
 .left-container {
-    width: 100%;
-    max-width: 500px;
-    background-color: #fff;
+    padding: 1vw;
+    width: 30vw;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     padding: 30px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 8px 0 #fff;
 }
 
-.left-container>h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-    text-align: center;
-}
+.left-container h3 {
+    font-size: 3vw;
+    font-weight: 200;
+    padding-bottom: 7vh;
+} 
 
 form {
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centered the content vertically */
-    gap: 15px; /* Added gap between form elements for better spacing */
+    justify-content: center;
+    /* Centered the content vertically */
+    gap: 10px;
+    padding-bottom: 1vh;
+    /* Added gap between form elements for better spacing */
 }
 
 
@@ -101,19 +126,20 @@ input[type="text"],
 }
 
 button {
-    padding: 12px 20px;
-    margin-bottom: 10px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    background-color: rgb(0, 129, 0);
-    color: #fff;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    width: 100%;
+    font-size: 1.5vw;
+    font-weight: 100;
+    padding: 0.5vw;
+    background-color: #1a2947;
+    color: white;
+    border-radius: 10px;
+    border: 1px solid #1a2947
 }
 
 button:hover {
-    background-color: #1f8244;
+    background-color: #131313;
+    cursor: pointer;
+
 }
 
 #error {
@@ -123,97 +149,181 @@ button:hover {
     text-align: center;
 }
 
+
 .right-container {
+    /* background-color: aqua; */
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    width: 45%;
-    color: white;
-    margin-left: 5%;
+    gap: 2vh;
+    width: 50vw;
+    padding-right: 10vw;
 }
 
-h3{
-    font-size: 60px;
+.right-container h3 {
+    font-size: 4vw;
     font-weight: 400;
-    margin-bottom: 10px;
 }
 
-p {
-    font-size: 20px;
+.right-container p {
+    font-size: 2vw;
     font-weight: 300;
-    line-height: 30px;
-    margin-bottom: 10px;
 }
 
-.right-button {
-    height: 7vh;
-    width: 40vh;
-    background-color: #212529;
+.view-btnplans {
+    width: 40%;
+    font-size: 1.5vw;
+    font-weight: 100;
+    padding: 0.5vw;
+    background-color: white;
+    color: #6b6b6b;
+    border: 1px solid #6b6b6b;
+    border-radius: 10px;
 }
 
-.view-plans {
+.view-btnplans:hover {
     color: white;
-    border: 0.5px solid gray;
-    background-color: transparent; /* Corrected background-color value */
-    padding: 10px 20px; /* Added padding for better spacing */
-    border-radius: 5px; /* Added border-radius for rounded corners */
-    cursor: pointer; /* Added cursor pointer for better UX */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Added transition for smooth hover effect */
+    background-color:
+        #3173f6;
+    border: none;
+    cursor: pointer;
+
 }
 
-.view-plans:hover {
-    color: #212529;
-    background-color: white;
+.create-btnaccount {
+    width: 40%;
+    font-size: 1.5vw;
+    font-weight: 100;
+    padding: 0.5vw;
+    background-color: #3173f6;
+    color: white;
+    border-radius: 10px;
+    border: 1px solid #3173f6
 }
 
-
-.create-account {
-    background-color: white;
-    color: #212529;
+.create-btnaccount:hover {
+    background-color: #1d5ef5;
 }
 
-.create-account:hover {
-    color: black;
-    background-color:#ced4da;
+.right-container h4 {
+    font-size: 2vw;
+    font-weight: 400;
 }
 
 .plan {
-    list-style: none;
-    margin-top: 10px;
-    font-size: 20px;
+    font-size: 2vw;
     font-weight: 300;
 }
 
-h4 {
-    font-size: 30px;
-    font-weight: 400;
-}
+/* Footer section  */
 
-
-.gap {
-    height: 10vh;
-}
-
-
-/* ----footer---- */
-
-.footer-container {
+.footer {
     height: 10vh;
     width: 100%;
     color: #ced4da;
-    background-color: #023e4e;
+    background-color: #1a2947;
     padding: 20px;
-    position: fixed; /* Fixed positioning to ensure it stays at the bottom */
-    bottom: 0; /* Positioned at the bottom of the page */
-    display: flex; /* Flexbox for alignment */
-    justify-content: center; /* Centered content horizontally */
-    align-items: center; /* Centered content vertically */
-    text-align: center; /* Centered text alignment */
+    /* position: fixed; Fixed positioning to ensure it stays at the bottom */
+    bottom: 0;
+    /* Positioned at the bottom of the page */
+    display: flex;
+    /* Flexbox for alignment */
+    justify-content: center;
+    /* Centered content horizontally */
+    align-items: center;
+    /* Centered content vertically */
+    text-align: center;
+    /* Centered text alignment */
+
 }
 
 
 a {
     text-decoration: none;
     color: #ced4da;
+}
 
+@media (max-width: 800px) {
+
+    .nav-part2 h4 {
+        display: none;
+    }
+
+    .nav-bar i {
+        display: flex;
+    }
+
+    .nav-bar h2 {
+        font-size: 6vw;
+    }
+
+    h1 {
+        font-size: 7vw;
+        font-weight: 700;
+        padding-top: 8vh;
+
+    }
+
+    .content {
+        display: block;
+        align-items: center;
+        justify-content: center;
+        padding: 4vh 3vw;
+    }
+
+    .left-container {
+        width: 100%;
+        height: 40vh;
+        padding-bottom: 2vh;
+        margin-bottom: 7vh;
+    }
+
+    .left-container h3 {
+        font-size: 9vw;
+        font-weight: 300;
+    } 
+
+
+    button {
+        padding: 2vw;
+        font-size: 4vw;
+        font-weight: 300;
+    }
+
+    .right-container {
+        width: 100%;
+    }
+
+    .right-container h3 {
+        font-size: 7vw;
+        font-weight: 400;
+    }
+
+    .right-container p {
+        font-size: 5vw;
+        line-height: 4vh;
+    }
+
+    .view-btnplans {
+        padding: 1.5vw;
+        font-size: 3vw;
+    }
+
+    .create-btnaccount {
+        padding: 1.5vw;
+        font-size: 3vw;
+    }
+
+    .right-container h4 {
+        font-size: 5vw;
+        font-weight: 400;
+    }
+
+    .plan {
+        font-size: 4vw;
+        font-weight: 300;
+    }
+
+    .footer {
+        font-size: 12px;
+    }
 }
